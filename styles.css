@@ -1,0 +1,269 @@
+/* General Styles */
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Skills Section */
+.skills {
+  background-color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.skills h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: #333;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.skill {
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  padding: 20px;
+  width: 150px;
+  text-align: center;
+}
+
+.skill img {
+  max-width: 50px;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer a {
+  color: #1abc9c;
+  text-decoration: none;
+}
+
+/* Projects Section */
+.projects {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.projects h1 {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.project {
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.project h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #2c3e50;
+}
+
+.project p {
+  font-family: 'Lato', sans-serif;
+  color: #7f8c8d;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #1abc9c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.project a:hover {
+  background-color: #16a085;
+}
+
+/* About Section */
+.about {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.about h1 {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.about p {
+  font-family: 'Lato', sans-serif;
+  color: #7f8c8d;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+/* Contact Section */
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.contact h1 {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-family: 'Lato', sans-serif;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+}
+
+.contact-info {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.contact-info p {
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 10px;
+}
+
+.contact-info a.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #1abc9c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.contact-info a.btn:hover {
+  background-color: #16a085;
+}
+
+/* Blog Section */
+.blog {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.blog h1 {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.blog p {
+  font-family: 'Lato', sans-serif;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+}
+
+.blog-post {
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.blog-post h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #2c3e50;
+}
+
+.blog-post .post-date {
+  font-family: 'Lato', sans-serif;
+  color: #95a5a6;
+  font-size: 0.9rem;
+}
+
+.blog-post p {
+  font-family: 'Lato', sans-serif;
+  color: #7f8c8d;
+  margin: 10px 0;
+}
+
+.blog-post a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #1abc9c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.blog-post a:hover {
+  background-color: #16a085;
+}
+
