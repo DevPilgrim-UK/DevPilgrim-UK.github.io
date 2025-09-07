@@ -5,6 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anthony Round - Projects</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Extra styles for the game embed */
+    #game-container {
+      margin-top: 1rem;
+      display: none; /* hidden until Play clicked */
+    }
+    iframe {
+      border: none;
+      width: 800px;
+      height: 600px;
+      max-width: 100%;
+    }
+    .game-controls {
+      margin-top: 0.5rem;
+    }
+    .game-controls button, .game-controls a {
+      margin: 0.25rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    #playBtn { background: #4caf50; color: white; }
+    #stopBtn { background: #f44336; color: white; }
+    .source-link { background: #2196f3; color: white; }
+  </style>
 </head>
 <body>
 
@@ -28,14 +56,25 @@
     <div class="project">
       <h2>Portfolio Website</h2>
       <p>This portfolio website, built with HTML, CSS, and JavaScript/jQuery, showcases my skills as a junior web developer. It features responsive design and focuses on accessibility and modern web practices.</p>
-      <a href="#">View Project</a> <!-- Update this link when the project is hosted -->
+      <a href="#">TBC</a> <!-- Update this link when the project is hosted -->
     </div>
 
-    <!-- Project 2 Placeholder -->
+    <!-- Project 2: Sidescroller Game -->
     <div class="project">
-      <h2>Future Project</h2>
-      <p>Stay tuned for my upcoming projects where I’ll demonstrate my ability to build creative and functional applications.</p>
-      <a href="#">Coming Soon</a>
+      <h2>Sidescroller Game (p5.js)</h2>
+      <p>A 2D sidescroller game built with the p5.js library. Featuring player controls, enemies, and animated scenery.</p>
+      
+      <!-- Controls -->
+      <div class="game-controls">
+        <button id="playBtn">▶ Play Game</button>
+        <button id="stopBtn">⏹ Stop Game</button>
+        <a class="source-link" href="https://github.com/DevPilgrim-UK/DevPilgrim-UK.github.io" target="_blank">💻 View Source</a>
+      </div>
+
+      <!-- Game Embed -->
+      <div id="game-container">
+        <iframe id="gameFrame" src="" title="Sidescroller Game"></iframe>
+      </div>
     </div>
   </section>
 
@@ -44,5 +83,22 @@
     <p>&copy; 2024 Anthony Round | Folkestone, UK | <a href="mailto:ajround93@hotmail.co.uk">ajround93@hotmail.co.uk</a></p>
   </footer>
 
+  <!-- Script to control Play/Stop -->
+  <script>
+    const playBtn = document.getElementById('playBtn');
+    const stopBtn = document.getElementById('stopBtn');
+    const gameContainer = document.getElementById('game-container');
+    const gameFrame = document.getElementById('gameFrame');
+
+    playBtn.addEventListener('click', () => {
+      gameContainer.style.display = 'block';
+      gameFrame.src = "sidescroller/index.html"; // path to your game’s index
+    });
+
+    stopBtn.addEventListener('click', () => {
+      gameContainer.style.display = 'none';
+      gameFrame.src = ""; // unloads game so it stops running
+    });
+  </script>
 </body>
 </html>
