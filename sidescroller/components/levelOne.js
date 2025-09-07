@@ -36,7 +36,7 @@ function startGame() {
     enemies.push(new Enemy(2650, floorPos_y -10, 530, 1));
     enemies.push(new Enemy(2850, floorPos_y -10, 420, 1));
     enemies.push(new Enemy(3050, floorPos_y -10, 210, 1));
-    enemies.push(new Enemy(-390, 355, 180, 3));
+    enemies.push(new Enemy(-390, 355, 180, 1));
 
     platforms = [];
     platforms.push(createPlatforms(1950, 300, 200));

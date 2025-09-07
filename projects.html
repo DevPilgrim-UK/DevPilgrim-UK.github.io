@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,23 +9,34 @@
     /* Game Controls Styling */
     #game-container {
       margin-top: 15px;
-      display: none;
+      display: none; /* hide iframe until Play clicked */
       width: 100%;
       max-width: 1024px;
+      overflow: hidden;
+      position: relative;
     }
 
     iframe {
-      width: 100%;
-      height: calc(100vw * 576 / 1024);
-      max-height: 576px;
+      width: 1024px;
+      height: 576px;
       border: none;
+      transform: scale(0.8);        /* scale down for smaller screens */
+      transform-origin: top left;   /* scale from top left corner */
     }
 
+    @media (max-width: 1200px) {
+      iframe { transform: scale(0.7); }
+    }
+
+    @media (max-width: 800px) {
+      iframe { transform: scale(0.6); }
+    }
 
     .game-controls {
       display: flex;
       gap: 10px;
       margin-top: 15px;
+      flex-wrap: wrap;
     }
 
     .game-controls button {
@@ -37,15 +47,8 @@
       font-size: 1rem;
     }
 
-    #playBtn {
-      background: #4caf50;
-      color: white;
-    }
-
-    #stopBtn {
-      background: #f44336;
-      color: white;
-    }
+    #playBtn { background: #4caf50; color: white; }
+    #stopBtn { background: #f44336; color: white; }
 
     .source-link {
       background: #2196f3;
@@ -56,10 +59,82 @@
       font-size: 1rem;
     }
 
-    .source-link:hover {
-      background-color: #1976d2;
-    }
+    .source-link:hover { background-color: #1976d2; }
   </style>
 </head>
-
 <body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Projects Section -->
+  <section class="projects">
+    <h1>My Projects</h1>
+
+    <!-- Project 1 -->
+    <div class="project">
+      <h2>Portfolio Website</h2>
+      <p>This portfolio website, built with HTML, CSS, and JavaScript/jQuery, showcases my skills as a junior web developer. It features responsive design and focuses on accessibility and modern web practices.</p>
+      <a href="#">TBC</a>
+    </div>
+
+    <!-- Project 2: Sidescroller Game -->
+    <div class="project">
+      <h2>Sidescroller Game (p5.js)</h2>
+      <p>A 2D sidescroller game built with the p5.js library. Featuring player controls, enemies, and animated scenery.</p>
+
+      <!-- Game Controls -->
+      <div class="game-controls">
+        <button id="playBtn">▶ Play Game</button>
+        <button id="stopBtn">⏹ Stop Game</button>
+        <a class="source-link" href="https://github.com/DevPilgrim-UK/DevPilgrim-UK.github.io/tree/main/sidescroller" target="_blank">💻 View Source</a>
+      </div>
+
+      <!-- Game Embed -->
+      <div id="game-container">
+        <iframe id="gameFrame" src="" title="Sidescroller Game"></iframe>
+      </div>
+    </div>
+
+    <!-- Future Project Placeholder -->
+    <div class="project">
+      <h2>Future Project</h2>
+      <p>Stay tuned for my upcoming projects where I’ll demonstrate my ability to build creative and functional applications.</p>
+      <a href="#">Coming Soon</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Anthony Round | Folkestone, UK | <a href="mailto:ajround93@hotmail.co.uk">ajround93@hotmail.co.uk</a></p>
+  </footer>
+
+  <!-- Script for Play/Stop -->
+  <script>
+    const playBtn = document.getElementById('playBtn');
+    const stopBtn = document.getElementById('stopBtn');
+    const gameContainer = document.getElementById('game-container');
+    const gameFrame = document.getElementById('gameFrame');
+
+    playBtn.addEventListener('click', () => {
+      gameContainer.style.display = 'block';
+      gameFrame.src = "sidescroller/index.html"; // relative path to your game
+    });
+
+    stopBtn.addEventListener('click', () => {
+      gameContainer.style.display = 'none';
+      gameFrame.src = ""; // unloads game so it stops running
+    });
+  </script>
+
+</body>
+</html>
