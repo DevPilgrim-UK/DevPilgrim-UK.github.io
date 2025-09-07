@@ -119,6 +119,11 @@ footer a {
   text-align: left;
 }
 
+.project.game-project {
+  max-width: 1100px; 
+}
+
+
 .project h2 {
   font-family: 'Poppins', sans-serif;
   color: #2c3e50;

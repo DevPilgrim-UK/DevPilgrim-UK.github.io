@@ -158,18 +158,18 @@ function draw() {
 
 		if (kunai.y > floorPos_y) {
 			let inCanyon = false;
-		
+
 			for (let j = 0; j < canyons.length; j++) {
 				if (kunai.x >= canyons[j].x_pos && kunai.x <= canyons[j].x_pos + canyons[j].width) {
 					inCanyon = true;
-					break;  
+					break;
 				}
 			}
-		
+
 			if (!inCanyon) {
 				kunai.moveable = false;
 			} else {
-				kunai.moveable = true; 
+				kunai.moveable = true;
 			}
 		}
 
@@ -192,9 +192,9 @@ function draw() {
 
 	updateRain(floorPos_y, gameSpeed);
 	drawRain(width * 4);
-	drawGUI();
 	pop();
-
+	
+	drawGUI();
 	if (gameOver) {
 		drawGameOver();
 	} else if (gamePassed) {
@@ -222,8 +222,8 @@ function keyPressed() {
 
 		if (keyCode == 32 && kunai > 0) {
 			kunaiList.push(createKunai(kunaiX, kunaiY, kunaiAngle, 12));
-			playThrowKunaiSound(); 
-			kunai --;
+			playThrowKunaiSound();
+			kunai--;
 		}
 
 		if ((keyCode == 87) && !isFalling && !isPlummeting && !isJumping) {
